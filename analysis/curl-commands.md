@@ -2,7 +2,7 @@
 
 Base URL demo app: `http://localhost:8088`
 
-Jalankan `curl -X POST http://localhost:8088/api/reset` lebih dulu supaya data produk dalam kondisi awal (3 produk seed) sebelum mengambil evidence.
+Jalankan `curl -X POST http://localhost:8088/api/reset`
 
 ## 1. GET - Daftar Produk
 ```bash
@@ -31,9 +31,3 @@ curl -i -X POST "http://localhost:8088/api/products" \
  -d '{"name":"Produk Tanpa Stok","category":"accessory","price":99000}'
 ```
 Expected: `400 Bad Request`, body berisi `{"error":"Missing required fields","missing":["stock"]}`.
-
----
-
-## Catatan
-- Jika eksekusi dilakukan lewat Postman, gunakan tombol **Code** (`</>`) pada tiap request untuk mendapatkan snippet curl yang sama persis, lalu tempel di sini sebagai bukti command.
-- Ganti nilai pada body sesuai data yang benar-benar kamu jalankan, lalu sesuaikan juga dengan response yang muncul di evidence/screenshot-mu.
