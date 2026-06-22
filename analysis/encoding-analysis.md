@@ -197,12 +197,6 @@ Mendefinisikan method HTTP apa saja yang diizinkan server. Browser menggunakan h
 
 ## 7. Kesimpulan
 
-> **Catatan:** Bagian ini perlu disesuaikan dengan pengalaman pribadi kamu saat menjalankan request — termasuk kendala spesifik yang kamu temui dan pembelajaran yang kamu rasakan sendiri.
-
-Dari pengerjaan Case 2 ini, terlihat jelas bagaimana REST API menggunakan kombinasi **HTTP method + status code + JSON encoding** sebagai kontrak komunikasi antara client dan server. Method GET dan POST masing-masing memiliki semantik yang berbeda dan tidak saling menggantikan. Status code bukan sekadar angka — masing-masing membawa makna spesifik tentang hasil operasi. Format JSON memudahkan representasi data terstruktur sekaligus tetap mudah dibaca manusia.
-
-Hal menarik yang ditemukan: server menambahkan field `id` dan `createdAt` secara otomatis pada response POST, memisahkan tanggung jawab antara data bisnis (dikirim client) dan metadata sistem (dikelola server). Ini adalah pola yang sangat umum dan penting dipahami dalam desain REST API.
-
-Kendala yang ditemui: [isi sendiri berdasarkan pengalaman kamu]
-
-Solusi: [isi sendiri]
+Berdasarkan pengujian Product/Inventory API, metode GET digunakan untuk mengambil data produk, sedangkan metode POST digunakan untuk menambahkan dan memperbarui data. Response server menggunakan format JSON sehingga mudah dibaca dan diproses oleh aplikasi.
+Status code HTTP membantu pengguna mengetahui apakah request berhasil atau terjadi kesalahan. Header seperti Content-Type dan Accept berperan penting dalam proses pertukaran data.
+Kendala yang ditemui selama praktikum adalah kemungkinan kesalahan pada endpoint atau format body request yang dapat menyebabkan error 400 atau 404. Dari praktikum ini dapat dipahami cara kerja komunikasi client-server, penggunaan metode HTTP, struktur response JSON, serta pentingnya analisis protocol dalam pertukaran data
